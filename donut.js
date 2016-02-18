@@ -61,7 +61,7 @@
 					setAttribute( arc, {
 						startangle: startAngle - fault,
 						endangle: startAngle = startAngle + value * 360 + fault,
-						strokecolor: colors[ i % colors.length ],
+						strokecolor: data[ i ].color || colors[ i % colors.length ],
 						fillcolor: 'none',
 						strokeweight: weight + 'px',
 						'data-name': data[ i ].name,
@@ -102,7 +102,7 @@
 							'M', startX, startY,
 							'A', arcRadius, arcRadius, 0, largeArc, 1, endX, endY
 						].join(' '),
-						stroke: colors[ i % colors.length ],
+						stroke: data[ i ].color || colors[ i % colors.length ],
 						'stroke-width': weight,
 						fill: 'none',
 						'data-name': data[ i ].name,

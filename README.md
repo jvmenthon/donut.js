@@ -25,17 +25,21 @@ var myDonut = donut({
   weight: 30,
   data: [{
     value: 1,
-    name: 'A'
+    name: 'A',
+	color: 'red'
   },{
     value: 2,
     name: 'B',
+	color: '#444',
     customData: 'Yeah'
   },{
     value: 3,
-    name: 'C'
+    name: 'C',
+	color: '#111'
   },{
     value: 4,
-    name: 'D'
+    name: 'D',
+	color: '#999'
   }],
   colors: [ '#80a8cc', '#da3b3e', '#ffa921', 'red' ]
 });
