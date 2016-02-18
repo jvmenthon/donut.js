@@ -37,6 +37,31 @@
 			
 			div.className = 'donut';
 			div.style.width = div.style.height = size + 'px';
+			if(options.position == "center"){
+				div.style.position = "relative";
+				div.style.top = -size/2 + "px";
+				div.style.left = -size/2 + "px";
+			}
+			
+			if(options.text){
+				var text = document.createElement("span");
+				text.className = "text";
+				text.innerHTML = options.text.text;
+				
+				text.style.position = "relative";
+				text.style.zIndex = 201;
+				
+				if(options.text.align === "center"){
+					text.style.display = "inline-block";
+					text.style.lineHeight = "100%";
+					text.style.verticalAlign = "middle";
+					div.style.lineHeight = div.style.height;
+					div.style.textAlign = "center";
+				}
+				
+				
+				div.appendChild( text );
+			}
 			
 			if( IE ) {
 				size -= weight;
