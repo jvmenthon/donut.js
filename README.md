@@ -17,12 +17,14 @@ var myDonutDiv = donut(options); // returns div with donut
 - ``size`` (Number) -- diameter of donut (100 by default)
 - ``weight`` (Number) -- weight of arcs (size minus donut hole diameter) (20 by default)
 - ``colors`` (Array) -- list of colors (``['#555']`` by default)
+- ``position`` (String) -- position 
 
 ```js
 var myDonut = donut({
   el: document.getElementById( 'container' ),
   size: 150,
   weight: 30,
+  position: "center",
   data: [{
     value: 1,
     name: 'A',
@@ -41,6 +43,10 @@ var myDonut = donut({
     name: 'D',
 	color: '#999'
   }],
+  text: {
+	text: "blabla",
+	position: "center"
+  },
   colors: [ '#80a8cc', '#da3b3e', '#ffa921', 'red' ]
 });
 ```
